@@ -7,7 +7,26 @@ using PrsEF;
 
 namespace PrsWithEF {
 	class Program {
+
 		static private PrsDbContext db = new PrsDbContext();
+
+		void LinqExample() {
+			int[] nbrs = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20 };
+
+			var total = nbrs.Sum();
+			total = nbrs.Where(i => i >= 10).Sum();
+			total = nbrs.Where(i => i % 2 == 1).Sum();
+
+			var sortednbrs = nbrs.OrderBy(i => i);
+			sortednbrs = nbrs.OrderByDescending(i => i);
+
+			var min = nbrs.Min();
+			var max = nbrs.Max();
+			var count = nbrs.Where(i => i > 5 && i <= 15).Count();
+
+			var subset = nbrs.Where(i => i % 3 == 0).ToArray();
+			var subset2 = nbrs.Where(i => i % 3 == 0).ToList();
+		}
 
 		public void CalcPrTotal() {
 

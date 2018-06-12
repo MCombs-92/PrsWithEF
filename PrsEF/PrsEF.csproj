@@ -84,6 +84,7 @@
     <Compile Include="PurchaseRequestLineItem.cs" />
     <Compile Include="stringlengthAttribute.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="UsersController.cs" />
     <Compile Include="Vendor.cs" />
   </ItemGroup>
   <ItemGroup>
